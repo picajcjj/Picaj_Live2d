@@ -132,7 +132,7 @@
             justify-content: center;
             z-index: 101;
             transition: background-color 0.2s, opacity 0.3s;
-        `;
+            `;
             document.body.appendChild(btn);
             function updateButtonPosition() {
                 const rect = tips.getBoundingClientRect();
