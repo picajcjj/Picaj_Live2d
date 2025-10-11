@@ -8,21 +8,24 @@
         btn.remove();
         return;
     }
-    input = document.createElement("input");
+    input = document.createElement("textarea");
     input.id = "waifu-chat-input";
-    input.type = "text";
-    input.placeholder = "和我说点什么吧~";
+    input.placeholder = "和我说点什么吧";
     input.style.cssText = `
     position:absolute;
     width:200px;
     padding:4px 6px;
+    max-height:17.5px;
+    resize:none;
     font-size:14px;
     border-radius:6px;
     border:1px solid #ccc;
     outline:none;
     z-index:101;
     background:rgba(255,255,255,0.9);
-`;
+    overflow-y:scroll;
+    scrollbar-width:none;
+    `;
     document.getElementById("waifu").appendChild(input);
 
     btn = document.createElement("button");
@@ -38,7 +41,7 @@
     color:#fff;
     cursor:pointer;
     z-index:101;
-`;
+    `;
     document.getElementById("waifu").appendChild(btn);
     input.focus();
     function updateInputPosition() {
@@ -57,12 +60,21 @@
         input.remove();
         btn.remove();
         const msg = input.value.trim();
-        if (!msg) return;
         const tips = document.getElementById("waifu-tips");
         tips.classList.add("waifu-tips-active");
         tips.innerHTML = "";
         input.disabled = true;
         btn.disabled = true;
+        if (!msg) {
+            a("你的问题是什么呢?~~~", 3000, 9);
+            tips.innerHTML = "你的问题是什么呢?~~~";
+            return;
+        }
+        if (msg.length >= 150) {
+            a("你的问题太长了，人家的脑袋处理不了这么多信息啦~~~", 3000, 9);
+            tips.innerHTML = "你的问题太长了，人家的脑袋处理不了这么多信息啦~~~";
+            return;
+        }
         a(`你说：${msg}`, 3000, 9);
         tips.innerHTML = `你说：${msg}`;
         try {
