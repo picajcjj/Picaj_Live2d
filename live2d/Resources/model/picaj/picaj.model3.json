@@ -3,7 +3,7 @@
 	"FileReferences": {
 		"Moc": "picaj.moc3",
 		"Textures": [
-			"picaj.8192/texture_00.png"
+			"picaj.8192/texture_00.webp"
 		],
 		"Physics": "picaj.physics3.json",
 		"DisplayInfo": "picaj.cdi3.json",
