@@ -2,7 +2,7 @@
 	"Type": "Live2D Expression",
 	"Parameters": [
 		{
-			"Id": "kuku",
+			"Id": "cry",
 			"Value": 1,
 			"Blend": "Add"
 		}

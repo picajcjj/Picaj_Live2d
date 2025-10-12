@@ -7,27 +7,27 @@
 			"Name": "嘴位置"
 		},
 		{
-			"Id": "shengqi",
+			"Id": "unhappy",
 			"GroupId": "ParamGroup8",
 			"Name": "生气"
 		},
 		{
-			"Id": "heilian",
+			"Id": "angry",
 			"GroupId": "ParamGroup8",
 			"Name": "黑脸"
 		},
 		{
-			"Id": "lianhong",
+			"Id": "shy",
 			"GroupId": "ParamGroup8",
 			"Name": "脸红"
 		},
 		{
-			"Id": "axy",
+			"Id": "love",
 			"GroupId": "ParamGroup8",
 			"Name": "爱心眼"
 		},
 		{
-			"Id": "kuku",
+			"Id": "cry",
 			"GroupId": "ParamGroup8",
 			"Name": "哭哭"
 		},
@@ -37,22 +37,22 @@
 			"Name": "头视"
 		},
 		{
-			"Id": "kuku2",
+			"Id": "cry2",
 			"GroupId": "ParamGroup8",
 			"Name": "哭哭融合变形"
 		},
 		{
-			"Id": "axy2",
+			"Id": "love2",
 			"GroupId": "ParamGroup8",
 			"Name": "爱心眼融合变形"
 		},
 		{
-			"Id": "shengqi2",
+			"Id": "unhappy2",
 			"GroupId": "ParamGroup8",
 			"Name": "生气融合变形"
 		},
 		{
-			"Id": "lianhong2",
+			"Id": "shy2",
 			"GroupId": "ParamGroup8",
 			"Name": "脸红融合变形"
 		},
