@@ -1,1 +1,1 @@
-# Picaj_Live2d
+# Picaj_Live2dc
