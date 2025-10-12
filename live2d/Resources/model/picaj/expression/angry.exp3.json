@@ -2,7 +2,7 @@
 	"Type": "Live2D Expression",
 	"Parameters": [
 		{
-			"Id": "angry",
+			"Id": "heilian",
 			"Value": 1,
 			"Blend": "Add"
 		}
