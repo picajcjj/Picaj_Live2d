@@ -39,7 +39,7 @@ function V() {
     border:none;
     border-radius:6px;
     background:#0099cc;
-    color:#fff;
+    color:pink;
     cursor:pointer;
     z-index:101;
     `;
