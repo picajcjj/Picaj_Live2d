@@ -38,8 +38,8 @@ function V() {
     font-size:13px;
     border:none;
     border-radius:6px;
-    background:#0099cc;
-    color:pink;
+    background:pink;
+    color:white;
     cursor:pointer;
     z-index:101;
     `;
