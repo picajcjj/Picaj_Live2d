@@ -67,16 +67,16 @@ function V() {
         input.disabled = true;
         btn.disabled = true;
         if (!msg) {
-            a("你的问题是什么呢?~~~", 3000, 9);
+            a("你的问题是什么呢?~~~", 3000, 10);
             tips.innerHTML = "你的问题是什么呢?~~~";
             return;
         }
         if (msg.length >= 150) {
-            a("你的问题太长了，人家的脑袋处理不了这么多信息啦~~~", 3000, 9);
+            a("你的问题太长了，人家的脑袋处理不了这么多信息啦~~~", 3000, 10);
             tips.innerHTML = "你的问题太长了，人家的脑袋处理不了这么多信息啦~~~";
             return;
         }
-        a(`你说：${msg}`, 3000, 9);
+        a(`你说：${msg}`, 3000, 10);
         tips.innerHTML = `你说：${msg}`;
         try {
             const res = await fetch("/api/ai/chat", {
@@ -95,9 +95,9 @@ function V() {
                 reply = "登录账号才能和yumi聊天哦~~~";
             }
             tips.innerHTML = reply;
-            a(reply, 8000, 9);
+            a(reply, 20000, 10);
         } catch (err) {
-            a("出错了…可能是网络问题。", 4000, 9);
+            a("出错了…可能是网络问题。", 4000, 10);
             console.error(err);
         } finally {
             input.disabled = false;
@@ -112,9 +112,10 @@ function V() {
         if (e.key === "Enter") sendMessage();
     });
 }function addCopyButton() {
-    const tips = document.getElementById("waifu-tips");
-    if (!tips) return;
-    if (!document.getElementById("waifu-tips-copy-btn")) {
+        const tips = document.getElementById("waifu-tips");
+        if (!tips) return;
+        const oldBtn = document.getElementById("waifu-tips-copy-btn");
+        if (oldBtn && oldBtn.parentNode) oldBtn.parentNode.removeChild(oldBtn);
         const btn = document.createElement("button");
         btn.id = "waifu-tips-copy-btn";
         btn.textContent = "📋";
@@ -136,7 +137,7 @@ function V() {
         document.body.appendChild(btn);
         function updateButtonPosition() {
             const rect = tips.getBoundingClientRect();
-            btn.style.top = `${rect.top - 25}px`;
+            btn.style.top = `${rect.top + 85}px`;
             btn.style.left = `${rect.right - 30}px`;
             requestAnimationFrame(updateButtonPosition);
         }
@@ -147,7 +148,7 @@ function V() {
                 if (btn.parentNode) btn.parentNode.removeChild(btn);
             }, 300);
         };
-        setTimeout(removeBtn, 5000);
+        setTimeout(removeBtn, 19000);
         btn.addEventListener("click", () => {
             const clone = tips.cloneNode(true);
             const existingBtn = clone.querySelector("#waifu-tips-copy-btn");
