@@ -78,6 +78,8 @@ function V() {
         }
         a(`你说：${msg}`, 3000, 10);
         tips.innerHTML = `你说：${msg}`;
+        const oldBtn = document.getElementById("waifu-tips-copy-btn");
+        if (oldBtn && oldBtn.parentNode) oldBtn.parentNode.removeChild(oldBtn);
         try {
             const res = await fetch("/api/ai/chat", {
                 method: "POST",
@@ -161,7 +163,7 @@ function V() {
             });
         });
     }
-}
+};
 var U={chat:{icon:y,callback:V},express:{icon:C,callback:()=>{window.live2d.randomExpression()}},"switch-model":{icon:S,callback:()=>{}},"switch-texture":{icon:x,callback:()=>{}},quit:{icon:F,callback:()=>{localStorage.setItem("waifu-display",Date.now()),a("\u613F\u4F60\u6709\u4E00\u5929\u80FD\u4E0E\u91CD\u8981\u7684\u4EBA\u91CD\u9022\u3002",2e3,11),document.getElementById("waifu").style.bottom="-500px",setTimeout(()=>{document.getElementById("waifu").style.display="none",document.getElementById("waifu-toggle").classList.add("waifu-toggle-active")},3e3)}}},u=U;function E(e){let o=new I(e);localStorage.removeItem("waifu-display"),sessionStorage.removeItem("waifu-text"),document.body.insertAdjacentHTML("beforeend",`<div id="waifu">
             <div id="waifu-tips"></div>
             <canvas id="live2d" width="800" height="800"></canvas>
